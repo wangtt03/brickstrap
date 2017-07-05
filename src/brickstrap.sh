@@ -71,7 +71,7 @@ function brickstrap_create_tar()
 
     echo "Creating $BRICKSTRAP_TAR_FILE from $BRICKSTRAP_DOCKER_IMAGE_NAME..."
 
-    brickstrap_tar_path=$(readlink -f "$BRICKSTRAP_TAR_FILE")
+    brickstrap_tar_path=$BRICKSTRAP_TAR_FILE
     brickstrap_tar_dir=$(dirname "$brickstrap_tar_path")
     brickstrap_tar_base=$(basename "$brickstrap_tar_path")
 
@@ -257,7 +257,7 @@ function brickstrap_create_report()
 
     echo "Creating reports..."
 
-    brickstrap_report_dir="$(readlink -f $BRICKSTRAP_REPORT_DIR_NAME)"
+    brickstrap_report_dir=$BRICKSTRAP_REPORT_DIR_NAME
 
 
     # create a docker container to persist data between docker commands
